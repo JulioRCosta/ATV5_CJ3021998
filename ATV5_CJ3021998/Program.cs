@@ -1,4 +1,3 @@
-﻿/*
 int a, temp;
 
 int soma = 0;
@@ -20,55 +19,93 @@ int num, cod;
 
 Console.WriteLine("Dê um determinado número");
 cod = int.Parse(Console.ReadLine());
-for (num = 0; num < cod; num++)
+num = 0;
+while (num<cod)
 {
     Console.WriteLine(num);
+    num++;
 }
 
 
 //Exercício 2
 
-int num1, cod2, par;
+int cod2;
 
 Console.WriteLine("Dê um determinado número");
 cod2 = int.Parse(Console.ReadLine());
-
-for (par = 0; par <= cod2; par++)
+int num1 = 0;
+while (num1<cod2)
 {
-    if (par % 2 == 0)
+    num1++;
+    if (num1 % 2 == 0)
+      
     {
-        Console.WriteLine(par);
+
+        Console.WriteLine(num1);
     }
 }
 
 
 // Exercício 3
 
-int mil, att;
+int z;
 
-Console.WriteLine("Dê qual valor");
-att = int.Parse(Console.ReadLine());
-for ( mil = 1000;  att<=mil  ; mil--)
+Console.WriteLine("Dê qualquer valor inteiro");
+z = int.Parse(Console.ReadLine());
+if (z < 1000) 
+    
 {
-    if (mil % 2==0)
+    int w = 0;
+    while (w <= z)
     {
-        Console.WriteLine(mil);
+        w++;
+
+        if (w % 2 == 0)
+        {
+            Console.WriteLine(w);
+        }
     }
 
 }
-*/
+
 
 // Exercício 4
 
-int n, c;
+int cor = 0;
 
-Console.WriteLine("Atribua um número");
-n = int.Parse(Console.ReadLine());
-
-for (c = 200; c>+n; c--)
+while(cor < 200)
 {
-    if (c <= 0)
+    cor++;
+
+    Console.WriteLine("Digite um valor");
+
+    int cor2 = int.Parse(Console.ReadLine());
+
+    if(cor2 > 0)
+
     {
-        Console.WriteLine(c);
+        Console.WriteLine(cor2);
+
+        cor += cor2;
+
+    }
+
+    Console.WriteLine("A soma dos números é {0}", cor);
+
+} 
+
+//Exercício 5
+
+Console.WriteLine("Digite um número inteiro");
+int nmr = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Os divisores de {0} são: ", nmr);
+int i = 1;
+while (i <= nmr)
+{
+    i++;
+    if (nmr % i == 0)
+    {
+        Console.WriteLine(i);
     }
 }
