@@ -1,111 +1,175 @@
-int a, temp;
-
-int soma = 0;
-
-for (a = 0; a < 3; a++) ;
-Console.WriteLine("Digite um valor");
-temp = int.Parse(Console.ReadLine());
-if (temp < 0)
+public static class Program
 {
-    break;
-}
-soma = temp;
-Console.WriteLine("A média é {0}", soma/3);
+	public static void Main()
+	{
 
+		//Exercício 1
 
-//Exercício 1
+int n;
 
-int num, cod;
+Console.WriteLine("Digite um número inteiro: \n");
 
-Console.WriteLine("Dê um determinado número");
-cod = int.Parse(Console.ReadLine());
-num = 0;
-while (num<cod)
+n = int.Parse(Console.ReadLine()); 
+
+for (int a = 0; a < n; a++)
+
 {
-    Console.WriteLine(num);
-    num++;
-}
 
+    
+
+    Console.WriteLine(a);
+
+}
 
 //Exercício 2
 
-int cod2;
+int n1;
 
-Console.WriteLine("Dê um determinado número");
-cod2 = int.Parse(Console.ReadLine());
-int num1 = 0;
-while (num1<cod2)
+Console.WriteLine("Digite um número inteiro: \n");
+
+n1 = int.Parse(Console.ReadLine());
+
+for (int a = 0; a <= n1; a++)
+
 {
-    num1++;
-    if (num1 % 2 == 0)
-      
+
+        if (a % 2 == 0)
+
     {
 
-        Console.WriteLine(num1);
+        Console.WriteLine(a);
+
     }
+
 }
 
-
-// Exercício 3
+//Exercício 3
 
 int z;
 
-Console.WriteLine("Dê qualquer valor inteiro");
-z = int.Parse(Console.ReadLine());
-if (z < 1000) 
-    
-{
-    int w = 0;
-    while (w <= z)
-    {
-        w++;
+Console.WriteLine("Digite um número inteiro: \n");
 
-        if (w % 2 == 0)
+    z = int.Parse(Console.ReadLine());
+
+ if (z < 1000)
+
+{
+
+    for (int a = 0; a <= z; a++){
+
+        if (a %2 ==0)
+
         {
-            Console.WriteLine(w);
+
+            Console.WriteLine(a);
+
         }
+
     }
 
 }
 
+//Exercício 4
 
-// Exercício 4
+int n2 = 0;
 
-int cor = 0;
+for (int i = 0; n2 < 200; i++)
 
-while(cor < 200)
 {
-    cor++;
 
     Console.WriteLine("Digite um valor");
 
-    int cor2 = int.Parse(Console.ReadLine());
+     int n3 = int.Parse(Console.ReadLine());
 
-    if(cor2 > 0)
+       if (n3 >0)
 
     {
-        Console.WriteLine(cor2);
 
-        cor += cor2;
+       Console.WriteLine(n3);
+
+        n2 += n3;
 
     }
 
-    Console.WriteLine("A soma dos números é {0}", cor);
+    Console.WriteLine("A soma dos números é {0}", n2);
 
-} 
+}
 
-//Exercício 5
+//exercício 5
+		Console.WriteLine("Digite um número inteiro:");
+        int numero = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Digite um número inteiro");
-int nmr = int.Parse(Console.ReadLine());
+        Console.WriteLine("Os divisores de " + numero + " são:");
 
-Console.WriteLine("Os divisores de {0} são: ", nmr);
-int i = 1;
-while (i <= nmr)
-{
-    i++;
-    if (nmr % i == 0)
-    {
-        Console.WriteLine(i);
-    }
+        for (int i = 1; i <= numero; i++)
+        {
+            if (numero % i == 0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+	
+
+//exercício 6
+
+int maior;
+int menor;
+
+        Console.WriteLine("Digite o 1º número: ");
+        int numero1 = int.Parse(Console.ReadLine());
+        maior = numero1;
+        menor = numero1;
+
+        for (int i = 2; i <= 10; i++)
+        {
+            Console.WriteLine($"Digite o {i}° número: ");
+            numero1 = int.Parse(Console.ReadLine());
+
+            if (numero1 > maior)
+            {
+                maior = numero1;
+            }
+
+            if (numero1 < menor)
+            {
+                menor = numero1;
+            }
+        }
+
+        Console.WriteLine($"O maior número digitado foi: {maior}");
+		
+		
+        Console.WriteLine($"O menor número digitado foi: {menor}\n");
+		
+//exercício 7
+
+int somaPares = 0;
+        int somaImpares = 0;
+
+        Console.WriteLine("Digite uma sequência de números (digite 0 para parar):");
+
+        while (true)
+        {
+            Console.Write("Digite um número: ");
+            int n9 = Convert.ToInt32(Console.ReadLine());
+
+            if (n9 == 0)
+            {
+                break; //
+            }
+
+            if (n9 % 2 == 0)
+            {
+                somaPares += n9;
+				}
+            
+            else
+            {
+                somaImpares += n9; 
+            }
+        }
+
+        Console.WriteLine($"A soma dos números pares é: {somaPares}");
+        Console.WriteLine($"A soma dos números ímpares é: {somaImpares}");		
+}
 }
